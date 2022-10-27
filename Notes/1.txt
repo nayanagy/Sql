@@ -1,0 +1,53 @@
+sql:Structured query language
+database:collection of tables
+DDL statements:(DATA Definition language)
+	These are used to create and manage the structure of the database.
+	
+	1)CREATE:used to create database and table.
+	
+	2)ALTER:alter command used to a)add new column to exitsting table.
+								b)to rename the column name.
+								c)to drop the column from table.
+								d)to modify the column datatype.
+	3)DROP:to drop the table from database.
+	
+	4)TRUNCATE: to truncate/Remove the data from the table.
+	
+	
+	ctrl+shift+enter===run
+	
+Syntax for creating database:
+		CREATE DATABASE database_name;
+		************************
+use database using 
+		use database_name;
+	**********************************************	
+/*sytax for creating table:
+	CREATE TABLE table_name(column_name1 datatype,column_name2 datatype,column_name3 datatype);
+	
+	example:
+														/*(20)&30 is size of colums*/
+	CREATE TABLE ipl_teams(id_teams int, team_name varchar(20), venue varchar(20),opositin varchar(30), days varchar(20));
+
+*******************
+ systax to fetch the data :
+
+SELECT is used to only read the data
+					SELECT * FROM table_name; 
+(*) indicates all columns from table 
+**********************************
+
+INSERT command used to insert the data in table
+
+	INSERT INTO table_name VALUES(data1,data2,data3)
+	
+	
+******************************
+	desc: describe table name
+	used to konow the datatype and columnname
+**************task*********************
+3 adata type int,varchar, bigint
+25 columns
+
+
+
