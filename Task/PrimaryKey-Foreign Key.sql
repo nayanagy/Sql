@@ -1,3 +1,4 @@
+/*****Primary key *******/
 CREATE TABLE ClientData(slno int,id int,order_no int,client_first_name varchar(30) not null,client_last_name varchar(30),online_payment boolean,address varchar(20),contact_no bigint unique,Created_on date,Created_at timestamp,primary key(id ,order_no ));
 SELECT * FROM ClientData;
 INSERT INTO ClientData VALUES(1,52,10,'Smruthi','B S ',true,'N R PURA',9876543423,'2022-03-16',now());
@@ -28,3 +29,25 @@ INSERT INTO ShopperData VALUES(9,63,2,'VishalMart','Shimoga',true,6000,'2022-11-
 INSERT INTO ShopperData VALUES(10,53,1,'SuperMarket','Banglor',true,8000,'2022-10-29',897654);
 
 SELECT * FROM shopperdata;
+
+/*Left remove:: remove leading space*/
+SELECT LTRIM(Shop_name) FROM shopperdata;
+SELECT LTRIM(Address) FROM shopperdata;
+SELECT LTRIM(contact_no) FROM shopperdata;
+SELECT LTRIM(order_no) FROM shopperdata;
+SELECT LTRIM(id) FROM shopperdata;
+SELECT LTRIM(total) FROM shopperdata;
+SELECT LTRIM(client_last_name) FROM clientdata;
+SELECT LTRIM(address) FROM clientdata;
+SELECT LTRIM(client_first_name) FROM clientdata;
+
+/* Rightremove:: remove trailing space*/
+SELECT RTRIM(Shop_name) FROM shopperdata;
+SELECT RTRIM(Address) FROM shopperdata;
+SELECT RTRIM(contact_no) FROM shopperdata;
+SELECT RTRIM(order_no) FROM shopperdata;
+SELECT RTRIM(id) FROM shopperdata;
+SELECT RTRIM(total) FROM shopperdata;
+SELECT RTRIM(client_last_name) FROM clientdata;
+SELECT RTRIM(address) FROM clientdata;
+SELECT RTRIM(client_first_name) FROM clientdata;
