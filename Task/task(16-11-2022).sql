@@ -148,5 +148,6 @@ SELECT Patient_data.Hospital_name as Patient_data,hospital_data.Hospital_name as
 select Patient_data.Hospital_name ,hospital_data.Hospital_name from Patient_data,hospital_data;
 
 /*subquries */
+
 SELECT Patient_address FROM Patient_data WHERE Hospital_name=(SELECT Hospital_name FROM hospital_data WHERE slno=2);
 SELECT Patient_address FROM Patient_data WHERE Hospital_Location=(SELECT city FROM hospital_data WHERE slno=2);
