@@ -54,3 +54,23 @@ SELECT bank_name FROM bank_details WHERE bank_id=(SELECT b_id FROM cust_details 
 SELECT bank_name FROM bank_details WHERE bank_id in(SELECT b_id FROM cust_details WHERE cust_id in(201,202,203));
 
 SELECT loan_type from loan_details where cust_id=(select cust_id from cust_details WHERE cust_name="nishitha");
+
+/* update */  
+/*update c_balance based on loan_type */
+update cust_details set c_balance=2000 where cust_id=(select cust_id from loan_details where loan_type="GoldLoan");
+
+SELECT bank_name FROM bank_details WHERE bank_id=(SELECT b_id FROM cust_details WHERE cust_id=(select cust_id from loan_details where loan_type='GoldLoan'));
+
+/*delete*/
+delete from bank_details where bank_id=(select b_id from loan_details where Loan_type='Agriculture' and id=1);
+delete from bank_details where bank_id=(select b_id from loan_details where loan_amount='23598' and Loan_type='Agriculture');
+delete from loan_details where cust_id=(select cust_id from cust_details where cust_name='Anusha');
+
+/* views:  */
+CREATE view nov17 as Select a.id,a.loan_type,b.cust_id,b.cust_name from loan_details as a,cust_details as b;
+
+select * from nov17;
+
+/* views does not use primary key and foriegn key data */
+/*CREATE view bank_data as Select a.id,a.loan_type,a.cust_id,a.b_id,b.cust_id,b.cust_name from loan_details as a,cust_details as b where a.b_id=b.b_id;*/
+
