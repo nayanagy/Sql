@@ -136,7 +136,16 @@ SELECT datediff('2022-11-22','2001-05-11');
 /* Dayname */
 SELECT dayname('2022-11-22');
 
+SELECT date('2022-11-22');
+
 SELECT dayofyear('2022-11-22');
+
+SELECT makedate(2022,13);
+
+SELECT date_add("2021-10-13, 19:16:00" ,interval 5 days) as interval;
+
+select upper(Shop_name) from textail_data;
+select lower(Shop_name) from textail_data;
 
 
 
